@@ -11,18 +11,46 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: #065f46;
+            color: white;
+        }
+
+        /* Scrollbar tipis ala CiwAI */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #065f46;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-emerald-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-3">
                     <img src="https://placehold.co/40x40/047857/white?text=DU" alt="Logo" class="w-10 h-10">
-                    <span class="font-bold text-emerald-800 text-lg leading-tight uppercase">MTsS Darul Ulum<br><span
-                            class="text-sm font-semibold tracking-wide">Pandeglang</span></span>
+                    <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4 drop-shadow-2xl">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-white via-emerald-100 to-yellow-200">
+                            MTsS DARUL ULUM
+                        </span>
+                        <br> PANDEGLANG
+                    </h1>
                 </div>
 
                 <div class="md:hidden flex items-center">
@@ -43,9 +71,14 @@
                     <a href="#" class="hover:text-emerald-700 transition">Kegiatan</a>
                     <a href="#" class="hover:text-emerald-700 transition">PPDB</a>
                     <a href="#" class="hover:text-emerald-700 transition">Kontak</a>
-                    <a href="/login"
-                        class="bg-emerald-800 text-white px-5 py-2 rounded-md hover:bg-emerald-900 transition shadow-md">PPDB
-                        Online</a>
+                    <a href="/login" class="flex items-center gap-2 bg-emerald-800 ...">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"></span>
+                        </span>
+                        PPDB Online
+                    </a>
                 </div>
             </div>
         </div>
@@ -91,7 +124,8 @@
 
     <section class="max-w-7xl mx-auto px-4 -mt-12 relative z-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-xl flex items-center gap-4 border-b-4 border-emerald-600">
+            <div
+                class="bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 border-b-4 border-emerald-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-emerald-100 hover:shadow-2xl cursor-pointer group">
                 <div class="bg-emerald-100 p-3 rounded-full text-emerald-700">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor font-bold">
@@ -284,6 +318,27 @@
     </footer>
 
     <script>
+        // Logic Back to Top
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.remove('hidden');
+                backToTop.classList.add('flex');
+            } else {
+                backToTop.classList.add('hidden');
+                backToTop.classList.remove('flex');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Logic Burger Menu
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
         const burgerIcon = document.getElementById('burger-icon');
@@ -294,7 +349,15 @@
             burgerIcon.classList.toggle('hidden');
             closeIcon.classList.toggle('hidden');
         });
+
     </script>
+
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 z-[99] hidden bg-emerald-800 text-white p-3 rounded-full shadow-2xl hover:bg-yellow-500 hover:text-emerald-950 transition-all duration-300 transform hover:scale-110 active:scale-95 border-2 border-white/20">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
 
 </body>
 
