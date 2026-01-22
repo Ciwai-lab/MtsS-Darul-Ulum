@@ -12,6 +12,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" as="image" href="/logo-darululum.webp">
+    <link rel="preload" as="image" href="/tropical-islamic-school.webp">
+    <img src="about-image.webp" loading="lazy">
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -47,7 +52,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-3">
-                    <img src="logo-darululum.webp" alt="Logo" class="w-10 h-10">
+                    <img src="logo-darululum.webp" alt="Logo" class="w-10 h-10" fetchpriority="high">
                     <span class="font-bold text-emerald-800 text-lg leading-tight uppercase">MTsS Darul Ulum<br><span
                             class="text-sm font-semibold tracking-wide">Pandeglang</span></span>
                 </div>
@@ -95,7 +100,8 @@
 
     <header class="relative h-[550px] flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="tropical-islamic-school.webp" alt="Gedung Sekolah" class="w-full h-full object-cover">
+            <img src="tropical-islamic-school.webp" alt="Gedung Sekolah" class="w-full h-full object-cover"
+                fetchpriority="high">
             <div class="absolute inset-0 bg-black/40"></div>
         </div>
 
@@ -161,7 +167,8 @@
             <div class="flex-1 relative md:-translate-y-4">
                 <div class="absolute -top-6 -left-6 w-32 h-32 bg-yellow-500/40 blur-xl rounded-2xl -z-10"></div>
 
-                <img src="about-image.webp"
+                <img src="about-image.webp" alt="Siswa MTsS Darul Ulum sedang belajar bersama" width="900" height="420"
+                    loading="lazy"
                     class="rounded-2xl border border-white/60 shadow-xl shadow-black/10 w-full object-cover h-[420px]" />
 
                 <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-400/40 blur-xl rounded-2xl -z-10"></div>
