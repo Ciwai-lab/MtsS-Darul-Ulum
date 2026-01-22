@@ -62,9 +62,12 @@
     <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-emerald-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <img src="logo-darululum.webp" alt="Logo MTsS Darul Ulum Pandeglang" width="40" height="40"
-                    decoding="async" fetchpriority="high" class="w-10 h-10">
-
+                <div class="flex items-center gap-3">
+                    <img src="logo-darululum.webp" alt="Logo MTsS Darul Ulum Pandeglang" decoding="async"
+                        fetchpriority="high" class="w-10 h-10" fetchpriority="high">
+                    <span class="font-bold text-emerald-800 text-lg leading-tight uppercase">MTsS Darul Ulum<br><span
+                            class="text-sm font-semibold tracking-wide">Pandeglang</span></span>
+                </div>
 
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button"
@@ -108,9 +111,11 @@
     </nav>
 
     <header class="relative h-[550px] flex items-center overflow-hidden">
-        <img src="tropical-islamic-school.webp" alt="" aria-hidden="true" width="1600" height="900" decoding="async"
-            fetchpriority="high" class="w-full h-full object-cover">
-
+        <div class="absolute inset-0 z-0">
+            <img src="tropical-islamic-school.webp" alt="" aria-hidden="true" decoding="async" fetchpriority="high"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
             <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4 drop-shadow-2xl">
@@ -174,8 +179,7 @@
             <div class="flex-1 relative md:-translate-y-4">
                 <div class="absolute -top-6 -left-6 w-32 h-32 bg-yellow-500/40 blur-xl rounded-2xl -z-10"></div>
 
-                <img src="about-image.webp" alt="Siswa MTsS Darul Ulum sedang belajar bersama" width="900" height="420"
-                    loading="lazy"
+                <img src="about-image.webp"
                     class="rounded-2xl border border-white/60 shadow-xl shadow-black/10 w-full object-cover h-[420px]" />
 
                 <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-400/40 blur-xl rounded-2xl -z-10"></div>
