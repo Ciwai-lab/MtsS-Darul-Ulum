@@ -11,6 +11,28 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: #065f46;
+            color: white;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #065f46;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -290,6 +312,27 @@
     </footer>
 
     <script>
+        // Logic Back to Top
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.remove('hidden');
+                backToTop.classList.add('flex');
+            } else {
+                backToTop.classList.add('hidden');
+                backToTop.classList.remove('flex');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Logic Burger Menu
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
         const burgerIcon = document.getElementById('burger-icon');
@@ -301,6 +344,13 @@
             closeIcon.classList.toggle('hidden');
         });
     </script>
+
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 z-[99] hidden bg-emerald-800 text-white p-3 rounded-full shadow-2xl hover:bg-yellow-500 hover:text-emerald-950 transition-all duration-300 transform hover:scale-110 active:scale-95 border-2 border-white/20">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
 
 </body>
 
