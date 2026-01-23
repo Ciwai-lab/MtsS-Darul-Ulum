@@ -101,15 +101,15 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#"
-                    class="block px-3 py-3 text-base font-semibold text-emerald-800 bg-emerald-50 rounded-lg">Beranda</a>
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">Beranda</a>
                 <a href="profil.html"
                     class="block px-3 py-3 text-base font-semibold text-emerald-800 bg-emerald-50 rounded-lg">
                     Profil
                 </a>
-
+                <a href="kegiatan.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
+                    Kegiatan
                 </a>
-                <a href="#"
-                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">Kegiatan</a>
                 <a href="#"
                     class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">PPDB</a>
                 <a href="/login"
@@ -121,7 +121,7 @@
 
     <!-- ================= HERO ================= -->
     <section class="bg-gradient-to-br from-emerald-50 via-white to-white">
-        <div class="max-w-7xl mx-auto px-4 py-20 text-center">
+        <div class="max-w-7xl mx-auto px-4 py-16 text-center">
             <h1 class="text-4xl md:text-5xl font-extrabold text-emerald-900">Profil Sekolah</h1>
             <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
                 Informasi resmi tentang MTsS Darul Ulum Pandeglang sebagai lembaga pendidikan Islam yang berkomitmen
@@ -131,7 +131,7 @@
     </section>
 
     <!-- ================= TENTANG ================= -->
-    <section class="max-w-6xl mx-auto px-4 py-16">
+    <section class="max-w-6xl mx-auto px-4 py-14">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-3xl font-extrabold text-emerald-900 mb-4">Tentang Sekolah</h2>
@@ -325,7 +325,7 @@
                     </svg>
                     Alamat Sekolah
                 </h4>
-                <p class="text-sm leading-relaxed text-emerald-200/80">
+                <p class="text-sm leading-relaxed text-emerald-100">
                     Kp. Pabuaran - Kurungdahu, <br>
                     Kec. Cadasari, Kab. Pandeglang, <br>
                     Prov. Banten
@@ -349,7 +349,7 @@
                     Hubungi Kami
                 </h4>
                 <p class="text-sm">+62 852-1787-3177</p>
-                <p class="text-sm mt-2 italic text-emerald-400"> mts.darululumpdg@gmail.com</p>
+                <p class="text-sm mt-2 italic text-emerald-200"> mts.darululumpdg@gmail.com</p>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6">Ikuti Kami</h4>
@@ -370,11 +370,50 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-emerald-800 text-center text-xs text-emerald-500">
+        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-emerald-800 text-center text-xs text-gray-100">
             &copy; 2026 MTsS Darul Ulum Pandeglang – Designed by CiwAI Smart Digital. Semua Hak Cipta Dilindungi.
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- LOGIC BURGER MENU ---
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const burgerIcon = document.getElementById('burger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    if (burgerIcon) burgerIcon.classList.toggle('hidden');
+                    if (closeIcon) closeIcon.classList.toggle('hidden');
+                });
+            }
+
+            // --- LOGIC BACK TO TOP ---
+            const backToTop = document.getElementById('back-to-top');
+
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTop.style.display = 'flex';
+                        backToTop.classList.remove('hidden');
+                    } else {
+                        backToTop.style.display = 'none';
+                    }
+                });
+
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>

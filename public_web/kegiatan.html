@@ -2,27 +2,56 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Kegiatan Sekolah – MTsS Darul Ulum Pandeglang</title>
     <meta name="description"
         content="Dokumentasi kegiatan dan prestasi MTsS Darul Ulum Pandeglang. Update otomatis dari Instagram resmi sekolah.">
-
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Fonts -->
+    <!-- Preload image penting -->
+    <link rel="preload" as="image" href="/logo-darululum.webp">
+    <link rel="preload" as="image" href="/tropical-islamic-school.webp">
+
+    <!-- Font optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind -->
+    <!-- Tailwind & Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         body {
             font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: #065f46;
+            color: white;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #065f46;
+            border-radius: 10px;
         }
 
         .nav-active {
@@ -36,35 +65,64 @@
 <body class="bg-white text-gray-700">
 
     <!-- ================= NAVBAR ================= -->
-    <header class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <header class="border-b bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <img src="logo-darululum.webp" alt="Logo MTsS Darul Ulum Pandeglang" decoding="async"
+                        fetchpriority="high" class="w-10 h-10">
+                    <span class="font-bold text-emerald-800 text-lg leading-tight uppercase">MTsS Darul Ulum<br><span
+                            class="text-sm font-semibold tracking-wide">Pandeglang</span></span>
+                </div>
 
-            <div class="flex items-center gap-3">
-                <img src="logo-darululum.webp" class="w-10 h-10" alt="Logo MTsS Darul Ulum">
-                <span class="font-bold text-emerald-800 text-sm uppercase leading-tight">
-                    MTsS Darul Ulum<br>
-                    <span class="text-xs font-medium">Pandeglang</span>
-                </span>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button"
+                        class="text-emerald-800 focus:outline-none p-2 rounded-md hover:bg-emerald-50">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="burger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
+                    <a href="index.html" class="hover:text-emerald-700 transition">Beranda</a>
+                    <a href="profil.html" class="hover:text-emerald-700 transition">Profil</a>
+                    <a href="kegiatan.html" class="nav-active">Kegiatan</a>
+                    <a href="ppdb.html" class="hover:text-emerald-700 transition">PPDB</a>
+                    <a href="kontak.html" class="hover:text-emerald-700 transition">Kontak</a>
+                    <a href="/login"
+                        class="bg-emerald-800 text-white px-5 py-2 rounded-md hover:bg-emerald-900 transition shadow-md">PPDB
+                        Online</a>
+                </div>
             </div>
-
-            <nav class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
-                <a href="index.html" class="hover:text-emerald-700">Beranda</a>
-                <a href="profil.html" class="hover:text-emerald-700">Profil</a>
-                <a href="kegiatan.html" class="nav-active">Kegiatan</a>
-                <a href="#" class="hover:text-emerald-700">PPDB</a>
-                <a href="#" class="hover:text-emerald-700">Kontak</a>
-
-                <a href="/login"
-                    class="bg-emerald-800 text-white px-5 py-2 rounded-md hover:bg-emerald-900 transition shadow-md">
-                    PPDB Online
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">Beranda</a>
+                <a href="profil.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
+                    Profil
                 </a>
-            </nav>
+                <a href="kegiatan.html"
+                    class="block px-3 py-3 text-base font-semibold text-emerald-800 bg-emerald-50 rounded-lg">
+                    Kegiatan
+                </a>
+                <a href="#"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">PPDB</a>
+                <a href="/login"
+                    class="block w-full text-center bg-emerald-800 text-white px-5 py-3 rounded-lg font-bold shadow-md">PPDB
+                    Online</a>
+            </div>
         </div>
     </header>
 
     <!-- ================= HERO ================= -->
     <section class="bg-gradient-to-br from-emerald-50 via-white to-white">
-        <div class="max-w-7xl mx-auto px-4 py-16 text-center">
+        <div class="max-w-7xl mx-auto px-4 py-10 sm:py-14 text-center">
             <h1 class="text-4xl font-extrabold text-emerald-900">Kegiatan Sekolah</h1>
             <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
                 Dokumentasi kegiatan, prestasi, dan aktivitas siswa MTsS Darul Ulum Pandeglang.
@@ -74,19 +132,19 @@
 
     <!-- ================= FEED KEGIATAN ================= -->
     <section class="bg-white">
-        <div class="max-w-6xl mx-auto px-4 py-16">
+        <div class="max-w-6xl mx-auto px-0 sm:px-4 py-8 sm:py-12">
 
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-extrabold text-emerald-900">Galeri Kegiatan</h2>
                 <p class="text-gray-600 mt-2">
-                    Update otomatis dari Instagram resmi sekolah
-                </p>
+                    Dokumentasi kegiatan terintegrasi melalui kanal resmi media sosial sekolah </p>
             </div>
 
             <!-- Wrapper biar widget nyatu dengan layout -->
-            <div class="bg-white border rounded-2xl p-4 sm:p-6 shadow-sm">
+            <div class="bg-white border rounded-2xl p-2 sm:p-4 md:p-6 shadow-sm">
                 <div data-behold-id="aVOuKvFrkaOUlylbZ8sB"></div>
             </div>
+
 
         </div>
     </section>
@@ -94,7 +152,7 @@
     <!-- ================= FOLLOW CTA ================= -->
     <section class="bg-slate-50 text-gray-900">
         <div class="max-w-6xl mx-auto px-4 py-12 text-center">
-            <h2 class="text-2xl font-bold">Ikuti Kegiatan Kami di Instagram</h2>
+            <h2 class="text-3xl font-extrabold text-emerald-900">Kunjungi Media Sosial Resmi Kami</h2>
             <p class="text-white/80 mt-2 mb-6">@__darululumpdg</p>
 
             <a href="https://www.instagram.com/__darululumpdg/" target="_blank"
@@ -176,6 +234,44 @@
             s.src = "https://w.behold.so/widget.js";
             d.head.append(s);
         })();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- LOGIC BURGER MENU ---
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const burgerIcon = document.getElementById('burger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    if (burgerIcon) burgerIcon.classList.toggle('hidden');
+                    if (closeIcon) closeIcon.classList.toggle('hidden');
+                });
+            }
+
+            // --- LOGIC BACK TO TOP ---
+            const backToTop = document.getElementById('back-to-top');
+
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTop.style.display = 'flex';
+                        backToTop.classList.remove('hidden');
+                    } else {
+                        backToTop.style.display = 'none';
+                    }
+                });
+
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+        lucide.createIcons();
     </script>
 
 </body>
