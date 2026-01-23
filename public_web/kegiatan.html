@@ -93,7 +93,7 @@
                     <a href="kegiatan.html" class="nav-active">Kegiatan</a>
                     <a href="ppdb.html" class="hover:text-emerald-700 transition">PPDB</a>
                     <a href="kontak.html" class="hover:text-emerald-700 transition">Kontak</a>
-                    <a href="/login"
+                    <a href="login.html"
                         class="bg-emerald-800 text-white px-5 py-2 rounded-md hover:bg-emerald-900 transition shadow-md">PPDB
                         Online</a>
                 </div>
@@ -101,7 +101,7 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
             <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#"
+                <a href="index.html"
                     class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">Beranda</a>
                 <a href="profil.html"
                     class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
@@ -111,11 +111,18 @@
                     class="block px-3 py-3 text-base font-semibold text-emerald-800 bg-emerald-50 rounded-lg">
                     Kegiatan
                 </a>
-                <a href="#"
-                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">PPDB</a>
-                <a href="/login"
-                    class="block w-full text-center bg-emerald-800 text-white px-5 py-3 rounded-lg font-bold shadow-md">PPDB
-                    Online</a>
+                <a href="ppdb.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
+                    PPDB
+                </a>
+                <a href="kontak.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
+                    Kontak
+                </a>
+                <a href="login.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
+                    PPDB Online
+                </a>
             </div>
         </div>
     </header>
@@ -185,9 +192,9 @@
             <div>
                 <h4 class="text-white font-bold mb-6">Tautan Cepat</h4>
                 <ul class="space-y-3 text-sm">
-                    <li><a href="#" class="hover:text-yellow-500 transition">Profil Sekolah</a></li>
-                    <li><a href="#" class="hover:text-yellow-500 transition">Ekstrakurikuler</a></li>
-                    <li><a href="#" class="hover:text-yellow-500 transition">PPDB Online</a></li>
+                    <li><a href="profil.html" class="hover:text-yellow-500 transition">Profil Sekolah</a></li>
+                    <li><a href="kegiatan.html" class="hover:text-yellow-500 transition">Ekstrakurikuler</a></li>
+                    <li><a href="ppdb.html" class="hover:text-yellow-500 transition">PPDB Online</a></li>
                 </ul>
             </div>
             <div>
@@ -225,6 +232,13 @@
             &copy; 2026 MTsS Darul Ulum Pandeglang – Designed by CiwAI Smart Digital. Semua Hak Cipta Dilindungi.
         </div>
     </footer>
+
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 z-[99] hidden bg-emerald-800 text-white p-3 rounded-full shadow-2xl hover:bg-yellow-500 hover:text-emerald-950 transition-all duration-300 transform hover:scale-110 active:scale-95 border-2 border-white/20">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
 
     <!-- ================= BEHOLD SCRIPT (cukup sekali) ================= -->
     <script>
@@ -271,6 +285,7 @@
                 });
             }
         });
+
         lucide.createIcons();
     </script>
 
