@@ -54,6 +54,12 @@
             background: #065f46;
             border-radius: 10px;
         }
+
+        .nav-active {
+            color: #047857;
+            border-bottom: 2px solid #047857;
+            padding-bottom: 4px;
+        }
     </style>
 </head>
 
@@ -64,7 +70,7 @@
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-3">
                     <img src="logo-darululum.webp" alt="Logo MTsS Darul Ulum Pandeglang" decoding="async"
-                        fetchpriority="high" class="w-10 h-10" fetchpriority="high">
+                        fetchpriority="high" class="w-10 h-10">
                     <span class="font-bold text-emerald-800 text-lg leading-tight uppercase">MTsS Darul Ulum<br><span
                             class="text-sm font-semibold tracking-wide">Pandeglang</span></span>
                 </div>
@@ -82,11 +88,11 @@
                 </div>
 
                 <div class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
-                    <a href="#" class="text-emerald-700 border-b-2 border-emerald-700">Beranda</a>
-                    <a href="profil.html" class="hover:text-emerald-700 transition">Profil</a>
-                    <a href="#" class="hover:text-emerald-700 transition">Kegiatan</a>
-                    <a href="#" class="hover:text-emerald-700 transition">PPDB</a>
-                    <a href="#" class="hover:text-emerald-700 transition">Kontak</a>
+                    <a href="index.html" class="nav-active">Beranda</a>
+                    <a href="profil.html" class="hover:text-emerald-700">Profil</a>
+                    <a href="kegiatan.html" class="hover:text-emerald-700 transition">Kegiatan</a>
+                    <a href="ppdb.html" class="hover:text-emerald-700 transition">PPDB</a>
+                    <a href="kontak.html" class="hover:text-emerald-700 transition">Kontak</a>
                     <a href="/login"
                         class="bg-emerald-800 text-white px-5 py-2 rounded-md hover:bg-emerald-900 transition shadow-md">PPDB
                         Online</a>
