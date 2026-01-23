@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MTsS Darul Ulum Pandeglang – Website Resmi</title>
+    <meta name="description"
+        content="Website resmi MTsS Darul Ulum Pandeglang. Informasi profil sekolah, kegiatan, dan pendaftaran PPDB online.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Preload image penting -->
+    <link rel="preload" as="image" href="/logo-darululum.webp">
+    <link rel="preload" as="image" href="/tropical-islamic-school.webp">
+
+    <!-- Font optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind & Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: #065f46;
+            color: white;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #065f46;
+            border-radius: 10px;
+        }
+
+        .nav-active {
+            color: #047857;
+            border-bottom: 2px solid #047857;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <img src="logo-darululum.webp" alt="Logo MTsS Darul Ulum Pandeglang" decoding="async"
+                        fetchpriority="high" class="w-10 h-10">
+                    <span class="font-bold text-emerald-800 text-lg leading-tight uppercase">MTsS Darul Ulum<br><span
+                            class="text-sm font-semibold tracking-wide">Pandeglang</span></span>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button"
+                        class="text-emerald-800 focus:outline-none p-2 rounded-md hover:bg-emerald-50">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="burger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
+                    <a href="index.html" class="nav-active">Beranda</a>
+                    <a href="profil.html" class="hover:text-emerald-700 transition">Profil</a>
+                    <a href="kegiatan.html" class="hover:text-emerald-700 transition">Kegiatan</a>
+                    <a href="ppdb.html" class="hover:text-emerald-700 transition">PPDB</a>
+                    <a href="kontak.html" class="hover:text-emerald-700 transition">Kontak</a>
+                    <a href="login.html"
+                        class="bg-emerald-800 text-white px-5 py-2 rounded-md hover:bg-emerald-900 transition shadow-md">PPDB
+                        Online</a>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#"
+                    class="block px-3 py-3 text-base font-semibold text-emerald-800 bg-emerald-50 rounded-lg">Beranda</a>
+                <a href="profil.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
+                    Profil
+                </a>
+                <a href="kegiatan.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
+                    Kegiatan
+                </a>
+                <a href="ppdb.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
+                    PPDB
+                </a>
+                <a href="kontak.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
+                    Kontak
+                </a>
+                <a href="login.html"
+                    class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-emerald-700 hover:bg-gray-50 rounded-lg">
+                    PPDB Online
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[550px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="tropical-islamic-school.webp" alt="" aria-hidden="true" decoding="async" fetchpriority="high"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4 drop-shadow-2xl">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-emerald-100 to-yellow-200">
+                    MTsS DARUL ULUM
+                </span>
+                <br> PANDEGLANG
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-8 max-w-2xl drop-shadow-md">
+                Membina Generasi Berilmu dan Berakhlak Mulia.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="login.html"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-emerald-950 font-bold py-3 px-8 rounded-md shadow-lg transition transform hover:scale-105 uppercase tracking-wide">
+                    Daftar PPDB Online
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-4 -mt-12 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 border-b-4 border-emerald-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-emerald-100 hover:shadow-2xl cursor-pointer group">
+                <div class="text-emerald-700">
+                    <i data-lucide="book-open"
+                        class="text-emerald-600 w-10 h-10 transition-transform group-hover:scale-110"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-800">Profil Sekolah</h3>
+                    <p class="text-sm text-gray-500">Tentang MTsS Darul Ulum</p>
+                </div>
+            </div>
+            <div
+                class="bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 border-b-4 border-emerald-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-emerald-100 hover:shadow-2xl cursor-pointer group">
+                <div class="text-emerald-700">
+                    <i data-lucide="award"
+                        class="text-emerald-600 w-10 h-10 transition-transform group-hover:scale-110"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-800">Program Unggulan</h3>
+                    <p class="text-sm text-gray-500">Kegiatan & Ekstrakurikuler</p>
+                </div>
+            </div>
+            <div
+                class="bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 border-b-4 border-emerald-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-emerald-100 hover:shadow-2xl cursor-pointer group">
+                <div class="text-emerald-700 font-bold">
+                    <i data-lucide="phone-call"
+                        class="text-emerald-600 w-10 h-10 transition-transform group-hover:scale-110"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-800">Kontak Kami</h3>
+                    <p class="text-sm text-gray-500">Hubungi & Lokasi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-20">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 relative md:-translate-y-4">
+                <div class="absolute -top-6 -left-6 w-32 h-32 bg-yellow-500/40 blur-xl rounded-2xl -z-10"></div>
+
+                <img src="about-image.webp"
+                    class="rounded-2xl border border-white/60 shadow-xl shadow-black/10 w-full object-cover h-[420px]" />
+
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-400/40 blur-xl rounded-2xl -z-10"></div>
+            </div>
+
+
+            <div class="flex-1">
+                <h2 class="text-emerald-900 text-3xl md:text-4xl font-extrabold mb-6">Tentang Kami</h2>
+                <h3 class="text-xl font-bold text-gray-700 mb-4">Selamat Datang di MTsS Darul Ulum Pandeglang</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Membina generasi yang berilmu, bertaqwa, dan berakhlak mulia melalui pendidikan terpadu.
+                    Kami berkomitmen menyediakan lingkungan belajar yang kondusif dan inovatif untuk menunjang
+                    potensi setiap siswa dalam menghadapi tantangan masa depan.
+                </p>
+                <div class="flex gap-4">
+                    <a href="profil.html"
+                        class="bg-emerald-800 text-white px-6 py-3 rounded-md font-bold hover:bg-emerald-900 transition flex items-center gap-2">
+
+                        Selengkapnya
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h2 class="text-3xl font-extrabold text-emerald-900">Update Kegiatan Terbaru</h2>
+                <div class="flex gap-4 mt-2 text-sm font-medium text-emerald-600">
+                    <span>#Berita</span>
+                    <span>#Kegiatan</span>
+                    <span>#Prestasi</span>
+                </div>
+            </div>
+            <a href="https://www.instagram.com/__darululumpdg/" target="_blank"
+                class="hidden md:block text-emerald-700 font-bold hover:underline">
+                Lihat Semua →
+            </a>
+        </div>
+
+        <!-- Behold embed -->
+        <div class="max-w-6xl mx-auto">
+            <div data-behold-id="Dt4Hy8SXLHjCSSaOMUJt"></div>
+        </div>
+
+        <!-- Script Behold (cukup sekali per halaman, taruh sebelum </body>) -->
+        <script type="module" src="https://w.behold.so/widget.js"></script>
+
+        <div class="mt-8 flex justify-center md:hidden">
+            <a href="https://www.instagram.com/__darululumpdg/" target="_blank"
+                class="bg-emerald-800 text-white px-8 py-2 rounded-full font-bold hover:bg-emerald-900 transition">
+                Lihat Semua
+            </a>
+        </div>
+    </section>
+
+    <section class="relative bg-emerald-900 py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1523050853064-88656793382c?auto=format&fit=crop&w=1920&q=80"
+                alt="PPDB BG" class="w-full h-full object-cover">
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+            <div class="inline-block h-1 w-20 bg-yellow-500 mb-6"></div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4 uppercase tracking-wider">PPDB Online</h2>
+            <p class="text-emerald-100 text-lg md:text-xl mb-10 max-w-3xl mx-auto">
+                Penerimaan Peserta Didik Baru MTsS Darul Ulum Pandeglang <br class="hidden md:block"> Tahun Pelajaran
+                2026/2027
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="ppdb.html"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-emerald-950 font-extrabold py-4 px-10 rounded-md shadow-2xl transition transform hover:-translate-y-1">
+                    Informasi PPDB
+                </a>
+                <a href="login.html"
+                    class="bg-transparent border-2 border-white hover:bg-white hover:text-emerald-900 text-white font-extrabold py-4 px-10 rounded-md transition transform hover:-translate-y-1">
+                    Daftar Sekarang &rsaquo;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#022c22] text-emerald-100 pt-16 pb-8 border-t border-emerald-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h4 class="text-white font-bold mb-6 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-500" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Alamat Sekolah
+                </h4>
+                <p class="text-sm leading-relaxed text-emerald-200/80">
+                    Kp. Pabuaran - Kurungdahu, <br>
+                    Kec. Cadasari, Kab. Pandeglang, <br>
+                    Prov. Banten
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Tautan Cepat</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="profil.html" class="hover:text-yellow-500 transition">Profil Sekolah</a></li>
+                    <li><a href="kegiatan.html" class="hover:text-yellow-500 transition">Ekstrakurikuler</a></li>
+                    <li><a href="ppdb.html" class="hover:text-yellow-500 transition">PPDB Online</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-500" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Hubungi Kami
+                </h4>
+                <p class="text-sm">+62 852-1787-3177</p>
+                <p class="text-sm mt-2 italic text-emerald-400"> mts.darululumpdg@gmail.com</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Ikuti Kami</h4>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/mtsdarululum.pandeglang/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="p-2 bg-emerald-800 rounded-full hover:bg-yellow-500 hover:text-emerald-900 transition"><svg
+                            class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/__darululumpdg/#" target="_blank" rel="noopener noreferrer"
+                        class="p-2 bg-emerald-800 rounded-full hover:bg-yellow-500 hover:text-emerald-900 transition"><svg
+                            class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-emerald-800 text-center text-xs text-emerald-500">
+            &copy; 2026 MTsS Darul Ulum Pandeglang – Designed by CiwAI Smart Digital. Semua Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 z-[99] hidden bg-emerald-800 text-white p-3 rounded-full shadow-2xl hover:bg-yellow-500 hover:text-emerald-950 transition-all duration-300 transform hover:scale-110 active:scale-95 border-2 border-white/20">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- LOGIC BURGER MENU ---
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const burgerIcon = document.getElementById('burger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    if (burgerIcon) burgerIcon.classList.toggle('hidden');
+                    if (closeIcon) closeIcon.classList.toggle('hidden');
+                });
+            }
+
+            // --- LOGIC BACK TO TOP ---
+            const backToTop = document.getElementById('back-to-top');
+
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTop.style.display = 'flex';
+                        backToTop.classList.remove('hidden');
+                    } else {
+                        backToTop.style.display = 'none';
+                    }
+                });
+
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
