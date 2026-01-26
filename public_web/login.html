@@ -93,20 +93,25 @@
         lucide.createIcons();
 
         async function login() {
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            const message = document.getElementById("message");
+    // 1. Ambil nama tenant dari URL (misal: sekolah-a.ciwai.dev -> ambil 'sekolah-a')
+    const hostname = window.location.hostname;
+    const tenant = hostname.split('.')[0]; 
 
-            message.classList.add("hidden");
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const message = document.getElementById("message");
 
-            try {
-                const res = await fetch("https://api.ciwai.dev/auth/login", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ email, password })
-                });
+    message.classList.add("hidden");
+
+    try {
+        const res = await fetch("https://api.ciwai.dev/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            // 2. Kirim 'tenant' ke Backend bareng email & password
+            body: JSON.stringify({ email, password, tenant }) 
+        });
 
                 const data = await res.json();
 
