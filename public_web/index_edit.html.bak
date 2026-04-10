@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTsS Darul Ulum - Coming Soon</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mtsdarululum.ciwai.dev/">
+    <meta property="og:title" content="MTsS Darul Ulum Pandeglang - Coming Soon">
+    <meta property="og:description"
+        content="Sesuatu yang besar sedang disiapkan. Transformasi digital Madrasah menuju masa depan bersama CiwAl™ Smart Digital.">
+    <meta property="og:image" content="https://mtsdarululum.ciwai.dev/logo-darululum.webp">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mtsdarululum.ciwai.dev/">
+    <meta property="twitter:title" content="MTsS Darul Ulum Pandeglang - Coming Soon">
+    <meta property="twitter:description"
+        content="Sesuatu yang besar sedang disiapkan. Transformasi digital Madrasah menuju masa depan bersama CiwAl™ Smart Digital.">
+    <meta property="twitter:image" content="https://mtsdarululum.ciwai.dev/assets/img/preview-surprise.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-[#022c22] min-h-screen flex items-center justify-center px-4">
+    <div class="max-w-md w-full text-center">
+        <div class="mb-8 flex justify-center">
+            <div class="relative">
+                <div class="absolute inset-0 bg-emerald-500 blur-2xl opacity-20 animate-pulse"></div>
+                <div class="bg-white/10 p-6 rounded-full border border-white/20 relative">
+                    <i data-lucide="construction" class="w-12 h-12 text-yellow-400 animate-bounce"></i>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-3xl font-black text-white mb-4 tracking-tighter uppercase">
+            Sesuatu yang Besar <br> Sedang Disiapkan!
+        </h1>
+        <p class="text-emerald-200/70 text-sm leading-relaxed mb-8">
+            MTsS Darul Ulum sedang bertransformasi menuju ekosistem digital yang lebih baik bersama <span
+                class="text-white font-bold">CiwAl™</span>. Nantikan kehadirannya segera!
+        </p>
+
+        <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden mb-8 border border-white/10">
+            <div
+                class="bg-emerald-500 h-full w-2/3 animate-[shimmer_2s_infinite] shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+            </div>
+        </div>
+
+        <div class="pt-8 border-t border-white/5">
+            <p class="text-[10px] text-emerald-500 font-bold uppercase tracking-[0.3em]">
+                © 2026 CiwAl Smart Digital
+            </p>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <style>
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(200%);
+            }
+        }
+    </style>
+</body>
+
+</html>
