@@ -10,13 +10,13 @@
     <meta property="og:url" content="https://mtsdarululum.ciwai.dev/">
     <meta property="og:title" content="MTsS Darul Ulum Pandeglang - Coming Soon">
     <meta property="og:description"
-        content="Sesuatu yang besar sedang disiapkan. Transformasi digital Madrasah menuju masa depan bersama CiwAl™ Smart Digital.">
-    <meta property="og:image" content="https://mtsdarululum.ciwai.dev/logo-darululum.webp">
+        content="Sesuatu yang besar sedang disiapkan. Transformasi digital Madrasah menuju masa depan bersama CiwAI™ Smart Digital.">
+    <meta property="og:image" content="https://mtsdarululum.ciwai.dev/assets/images/logo-darululum.webp">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mtsdarululum.ciwai.dev/">
     <meta property="twitter:title" content="MTsS Darul Ulum Pandeglang - Coming Soon">
     <meta property="twitter:description"
-        content="Sesuatu yang besar sedang disiapkan. Transformasi digital Madrasah menuju masa depan bersama CiwAl™ Smart Digital.">
+        content="Sesuatu yang besar sedang disiapkan. Transformasi digital Madrasah menuju masa depan bersama CiwAI™ Smart Digital.">
     <meta property="twitter:image" content="https://mtsdarululum.ciwai.dev/assets/img/preview-surprise.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -39,7 +39,7 @@
         </h1>
         <p class="text-emerald-200/70 text-sm leading-relaxed mb-8">
             MTsS Darul Ulum sedang bertransformasi menuju ekosistem digital yang lebih baik bersama <span
-                class="text-white font-bold">CiwAl™</span>. Nantikan kehadirannya segera!
+                class="text-white font-bold">CiwAI™</span>. Nantikan kehadirannya segera!
         </p>
 
         <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden mb-8 border border-white/10">
@@ -50,7 +50,7 @@
 
         <div class="pt-8 border-t border-white/5">
             <p class="text-[10px] text-emerald-500 font-bold uppercase tracking-[0.3em]">
-                © 2026 CiwAl Smart Digital
+                © 2026 CiwAI Smart Digital
             </p>
         </div>
     </div>

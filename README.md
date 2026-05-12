@@ -16,6 +16,16 @@ Project ini menggunakan pendekatan hybrid: Static Landing Page & Dynamic Dashboa
 - Feed Kegiatan via Instagram Hybrid.
 - Link PPDB Online.
 
+## 📁 Struktur Portal Publik
+```text
+public_web/
+├── assets/
+│   ├── images/      # Foto pengajar, logo, dan background
+│   └── icons/       # Favicon dan apple-touch icon
+├── css/             # Stylesheet custom
+└── *.html           # Halaman publik
+```
+
 ### 2. Dashboard Tutor (Dynamic - EC2)
 - **Input Modul:** Support PDF, Video/YouTube, & Audio.
 - **Terintegrasi:** Buka modul langsung di dashboard (no new tabs).
