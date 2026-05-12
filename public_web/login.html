@@ -95,24 +95,24 @@
 
         async function login() {
 
-    const hostname = window.location.hostname;
-const tenant = window.location.hostname.split('.')[0];
+            const hostname = window.location.hostname;
+            const tenant = window.location.hostname.split('.')[0];
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const message = document.getElementById("message");
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const message = document.getElementById("message");
 
-    message.classList.add("hidden");
+            message.classList.add("hidden");
 
-    try {
-        const res = await fetch("https://api.ciwai.dev/auth/login", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-        "X-Tenant": tenant // Ini wajib ada!
-    },
-    body: JSON.stringify({ email, password })
-});
+            try {
+                const res = await fetch("https://api.ciwai.dev/auth/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-Tenant": tenant
+                    },
+                    body: JSON.stringify({ email, password })
+                });
 
                 const data = await res.json();
 
@@ -122,10 +122,8 @@ const tenant = window.location.hostname.split('.')[0];
                     return;
                 }
 
-                // Simpan token
                 localStorage.setItem("ciwai_token", data.token);
 
-                // Redirect (nanti kita bikin dashboard)
                 window.location.href = "/dashboard.html";
 
             } catch (err) {

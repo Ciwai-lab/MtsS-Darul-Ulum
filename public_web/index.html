@@ -9,24 +9,20 @@
     <meta name="description"
         content="Website resmi MTsS Darul Ulum Pandeglang. Informasi profil sekolah, kegiatan, dan pendaftaran PPDB online.">
 
-    <!-- Favicon -->
     <link rel="icon" href="assets/icons/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
-    <!-- Preload image penting -->
     <link rel="preload" as="image" href="assets/images/logo-darululum.webp">
     <link rel="preload" as="image" href="assets/images/tropical-islamic-school.webp">
 
-    <!-- Font optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind & Icons -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     <link rel="stylesheet" href="css/style.css">
 
     <style>
@@ -130,8 +126,8 @@
 
     <header class="relative h-[550px] flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="assets/images/tropical-islamic-school.webp" alt="" aria-hidden="true" decoding="async" fetchpriority="high"
-                class="w-full h-full object-cover">
+            <img src="assets/images/tropical-islamic-school.webp" alt="" aria-hidden="true" decoding="async"
+                fetchpriority="high" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/40"></div>
         </div>
 
@@ -244,12 +240,10 @@
             </a>
         </div>
 
-        <!-- Behold embed -->
         <div class="max-w-6xl mx-auto">
             <div data-behold-id="Dt4Hy8SXLHjCSSaOMUJt"></div>
         </div>
 
-        <!-- Script Behold (cukup sekali per halaman, taruh sebelum </body>) -->
         <script type="module" src="https://w.behold.so/widget.js"></script>
 
         <div class="mt-8 flex justify-center md:hidden">
@@ -373,7 +367,6 @@
                 });
             }
 
-            // --- LOGIC BACK TO TOP ---
             const backToTop = document.getElementById('back-to-top');
 
             if (backToTop) {
